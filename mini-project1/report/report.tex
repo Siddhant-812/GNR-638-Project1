@@ -1,0 +1,116 @@
+% Preamble
+\documentclass[12pt, a4paper, twoside]{article}
+\usepackage[a4paper, left=0.75in, right=0.75in, top=1in, bottom=1in]{geometry}
+\usepackage{lipsum, verbatim, fancyhdr, lastpage, graphicx, hyperref, amsmath}
+% \usepackage[backend=bibtex]{biblatex}
+\graphicspath{{./plots/}}
+% \addbibresource{ref.bib}
+% Top Matter
+\setlength{\parindent}{0pt}
+\hypersetup{
+	colorlinks   = true,
+	urlcolor     = blue, 
+	linkcolor    = blue, 
+	citecolor   = red
+}
+\pagestyle{fancy}
+\fancyhead[CO, CE]{GNR 638 (Spring 2024):  Mini Project 1}
+\fancyhead[LO, LE, RO, RE]{}
+\fancyfoot[CO, CE]{Page \thepage\ of \pageref{LastPage}}
+\fancyfoot[LO, LE, RO, RE]{}
+
+\title{\vspace{-0.5in}\textbf{GNR 638 (Spring 2024): Mini Project 1\\{\large Fine Grained Classification on CUB Dataset Using CNN}}}
+\author{Soumen Mondal (23m2157)\\Siddhant Gole (23m2154)\\Akash Pal (23m2158)}
+\date{\today}
+
+% Main Matter
+\begin{document}
+	\maketitle
+	\thispagestyle{fancy}
+	
+	\section{Introduction}
+		
+		1.1 Background
+		Fine-grained classification is a challenging task in computer vision, involving the categorization of objects into highly specialized classes with subtle differences.
+		
+		1.2 Motivation
+		The importance of fine-grained classification in various real-world applications and the need for efficient models to address this task.
+		
+		1.3 Objectives
+		The primary objectives of the project, including training a CNN model with an upper limit of 10 million parameters, achieving high accuracy, and ensuring parameter and training time efficiency.
+		
+		1.4 Scope
+		An overview of the report's contents, including methodology, experimental setup, results, discussion, and conclusion.
+		
+	\section{Methodology}
+		
+		2.1 Dataset
+		Description of the CUB dataset used for training and evaluation.
+		
+		2.2 Model Selection
+		Rationale behind choosing the EfficientNet-B0 architecture for fine-grained classification and its advantages in terms of parameter efficiency and accuracy.
+		
+		2.3 Transfer Learning
+		Details of how transfer learning from ImageNet-pretrained weights was employed to initialize the model's weights and improve training efficiency.
+		
+	\section{Experimental Setup}
+		
+		3.1 Training Configuration
+		Description of the training parameters, including batch size, learning rate, optimizer, and any regularization techniques employed.
+		
+		3.2 Evaluation Metrics
+		Explanation of the evaluation metrics used to assess the model's performance, such as accuracy, precision, recall, and F1-score.
+		
+	\section{Results}
+		
+		4.1 Training Process
+		Visualization of the training loss and accuracy curves over epochs to demonstrate the model's convergence and performance during training.
+		
+		4.2 Performance Evaluation
+		Presentation of the final accuracy achieved on the test set and comparison with baseline models or state-of-the-art approaches.
+		
+	\section{Discussion}
+		
+		5.1 Interpretation of Results
+		Analysis of the findings, including insights into the model's performance, strengths, limitations, and areas for improvement.
+		
+		5.2 Parameter Efficiency
+		Discussion on how the model's parameter efficiency contributed to its effectiveness in fine-grained classification tasks.
+		
+		5.3 Training Time Efficiency
+		Evaluation of the training time efficiency in terms of the number of iterations required to achieve convergence.
+		
+	\section{Conclusion}
+		
+		6.1 Summary of Findings
+		A summary of the key findings and contributions of the project, highlighting the effectiveness of the EfficientNet-B0 model for fine-grained classification.
+		
+		6.2 Implications and Future Work
+		Discussion on the implications of the findings and suggestions for future research directions, such as exploring other efficient architectures or datasets.
+		
+		6.3 Closing Remarks
+		Final remarks on the significance of the project and its potential impact on the field of computer vision.
+		
+
+	
+	%	\begin{table}
+		%		\begin{center}
+			%			\begin{tabular}{c c c c}
+				%				\hline
+				%				Model Name & Best Learning Rate & Best Number of Epoch & Best Momentum \\ \hline
+				%				Logistic Regression & $0.1$ & $250$ & $0$ \\ \hline
+				%				Linear Classifier & $0.01$ & $500$ & $0.9$ \\ \hline
+				%			\end{tabular}
+			%			\caption{Best hyper-parameters selected for the LR and LC model}\label{T:lrlc}
+			%		\end{center}
+		%	\end{table}
+	% Figures
+	%	\begin{figure}[p]
+		%		\centering
+		%		\includegraphics[width=\textwidth]{LC_effect_mom_loss}
+		%		\caption{Effect of momentum on loss of LC model}
+		%		\label{F:LC_effect_mom_loss}
+		%	\end{figure}
+	
+	% \printbibliography
+\end{document}
