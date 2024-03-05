@@ -29,31 +29,29 @@
 	\thispagestyle{fancy}
 	
 	\section{Introduction}
+	
+		This project focuses on addressing the challenging task of fine-grained classification in computer vision, where objects are categorized into highly specialized classes with subtle differences. The motivation stems from the importance of fine-grained classification in real-world applications and the need for efficient models to tackle this task. The primary objectives include training a Convolutional Neural Network (CNN) model with a maximum of 10 million parameters, achieving high accuracy, and ensuring parameter and training time efficiency. The scope of the report encompasses a detailed methodology, experimental setup, results, discussion, and conclusion, providing insights into the effectiveness of the proposed approach in addressing fine-grained classification challenges.
 		
-		1.1 Background
-		Fine-grained classification is a challenging task in computer vision, involving the categorization of objects into highly specialized classes with subtle differences.
-		
-		1.2 Motivation
-		The importance of fine-grained classification in various real-world applications and the need for efficient models to address this task.
-		
-		1.3 Objectives
-		The primary objectives of the project, including training a CNN model with an upper limit of 10 million parameters, achieving high accuracy, and ensuring parameter and training time efficiency.
-		
-		1.4 Scope
-		An overview of the report's contents, including methodology, experimental setup, results, discussion, and conclusion.
 		
 	\section{Methodology}
+	
+		\subsection{Dataset}
+			
+			The dataset used for training and evaluation is the CUB (Caltech-UCSD Birds-200-2011) dataset, a widely-used benchmark for fine-grained classification tasks in computer vision. It contains images of 200 bird species, with each species having a varying number of images. The dataset provides annotations for bounding boxes around the birds, enabling precise localization of the objects. Additionally, it includes attributes for each bird species, which can further aid in classification tasks by providing additional semantic information.
 		
-		2.1 Dataset
-		Description of the CUB dataset used for training and evaluation.
+		\subsection{Model Selection}
 		
-		2.2 Model Selection
-		Rationale behind choosing the EfficientNet-B0 architecture for fine-grained classification and its advantages in terms of parameter efficiency and accuracy.
+			The choice of the EfficientNet-B0 architecture for fine-grained classification is motivated by its superior performance in terms of parameter efficiency and accuracy. EfficientNet models are specifically designed to achieve better trade-offs between accuracy and computational resources by scaling the network architecture in a principled manner. The EfficientNet-B0 variant, being the smallest and least computationally intensive model in the EfficientNet family, strikes a balance between model complexity and performance, making it well-suited for fine-grained classification tasks. Its efficient use of parameters allows for faster training and inference without compromising on accuracy, making it an ideal choice for resource-constrained environments.
+			
+		\subsection{Transfer Learning}
 		
-		2.3 Transfer Learning
-		Details of how transfer learning from ImageNet-pretrained weights was employed to initialize the model's weights and improve training efficiency.
+			Transfer learning from ImageNet-pretrained weights was employed to initialize the model's weights and improve convergence during training. By leveraging the pre-trained weights from a large-scale dataset like ImageNet, which contains millions of images across thousands of categories, the model can benefit from learning generic features that are transferable to the fine-grained classification task. This initialization helps the model to start from a better initialization point, allowing it to learn task-specific features more efficiently and effectively. Fine-tuning the pre-trained model on the target dataset further refines the learned representations, adapting them to the specific characteristics of the CUB dataset and improving overall classification performance.
+		
+		
 		
 	\section{Experimental Setup}
+	
+		\subsection{Training Configuration}
 		
 		3.1 Training Configuration
 		Description of the training parameters, including batch size, learning rate, optimizer, and any regularization techniques employed.
